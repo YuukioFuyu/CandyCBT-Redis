@@ -1,4 +1,4 @@
-<?php session_start();
+<?php require_once __DIR__ . '/../config/config.session.php';
  
 header("Content-type: image/png");
  

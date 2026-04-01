@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/config.session.php';
 $copyright = 'CBT Redis';
 define("VERSI", " V.3.0.0");
 define("REVISI", "@mryes");
