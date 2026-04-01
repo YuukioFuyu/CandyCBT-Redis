@@ -2,11 +2,7 @@
 include 'setting_url.php';
 
 //setting up one redis-----------------------------------------
-require "../vendor/autoload.php";
-use RedisClient\RedisClient;
-use RedisClient\Client\Version\RedisClient2x6;
-use RedisClient\ClientFactory;
-
+// using native phpredis extension
 //setting up one redis-----------------------------------------
 
 
@@ -16,8 +12,28 @@ class Budut extends Db{
   
  
   function RedisKoneksi(){
-
-    return $this->redis   = new RedisClient();
+    $redis = new Redis();
+    $host = isset($_ENV['REDIS_HOST']) ? $_ENV['REDIS_HOST'] : '127.0.0.1';
+    $port = isset($_ENV['REDIS_PORT']) ? $_ENV['REDIS_PORT'] : 6379;
+    $timeout = isset($_ENV['REDIS_TIMEOUT']) ? $_ENV['REDIS_TIMEOUT'] : 0;
+    $password = isset($_ENV['REDIS_PASSWORD']) ? $_ENV['REDIS_PASSWORD'] : '';
+    $username = isset($_ENV['REDIS_USERNAME']) ? $_ENV['REDIS_USERNAME'] : '';
+    $database = isset($_ENV['REDIS_DATABASE']) ? $_ENV['REDIS_DATABASE'] : 0;
+    
+    try {
+        $redis->connect($host, $port, $timeout);
+        if (!empty($password)) {
+            if (!empty($username)) {
+                $redis->auth([$username, $password]);
+            } else {
+                $redis->auth($password);
+            }
+        }
+        if ($database > 0) {
+            $redis->select($database);
+        }
+    } catch (Exception $e) { }
+    return $this->redis = $redis;
   }
  
   function WaktuLamaCache(){

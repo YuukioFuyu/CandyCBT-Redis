@@ -8,11 +8,21 @@
   Terimakasih
 */
 //======Pengaturan Koneksi Database======================================
-$hostdb = 'localhost';
-$userdb = 'root';
-$passdb = '';
-$namadb = 'redis3';
-$kodeRedis = 'redis13'; //untuk kode cache redis, isikan saja sesuka hati contoh "ruang1" jadi "ruangku" 
+$envFile = __DIR__ . '/../.env';
+$env = [];
+if (file_exists($envFile)) {
+    $env = parse_ini_file($envFile);
+    foreach ($env as $key => $value) {
+        $_ENV[$key] = $value;
+        putenv("$key=$value");
+    }
+}
+
+$hostdb = isset($_ENV['DATABASE_HOST']) ? $_ENV['DATABASE_HOST'] : 'localhost';
+$userdb = isset($_ENV['DATABASE_USERNAME']) ? $_ENV['DATABASE_USERNAME'] : 'root';
+$passdb = isset($_ENV['DATABASE_PASSWORD']) ? $_ENV['DATABASE_PASSWORD'] : '';
+$namadb = isset($_ENV['DATABASE_NAME']) ? $_ENV['DATABASE_NAME'] : 'redis3';
+$kodeRedis = isset($_ENV['REDIS_PREFIX']) ? $_ENV['REDIS_PREFIX'] : 'redis13'; //untuk kode cache redis, isikan saja sesuka hati contoh "ruang1" jadi "ruangku" 
 
 //koneksi database server
 /*
