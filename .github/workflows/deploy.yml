@@ -39,4 +39,6 @@ jobs:
 
       - name: Create .env file
         run: |
-          ssh root@2.0.2.102 "printf '%s\n' '${{ secrets.ENV }}' > /opt/docker/demo_yuukiofuyu_candycbt-redis/app/.env"
+          ssh root@2.0.2.102 << EOF
+            printf '%s' "${{ secrets.ENV }}" > /opt/docker/demo_yuukiofuyu_candycbt-redis/app/.env
+          EOF
