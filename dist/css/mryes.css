@@ -1,0 +1,53 @@
+/*
+warna unguu gradien
+background-image: linear-gradient(89.81deg,#8D6EAA .03%, #8387BC 99.64%);
+*/
+.color-mryes{
+  background-color: #05405a;
+  color: white;
+}
+.table thead{
+  background-color: red;background-color: #025173;
+  color: white;
+}
+
+.table thead:hover{
+  background-color: red;background-color: #025173;
+  color: white;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+  background-color: #e0f7fa;    /*   #f0f5f7*/
+
+}
+.btn {
+  display: inline-block;
+  /*padding: 6px 12px;*/
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+.btn-app>.badge {
+  position: absolute;
+  top: -3px;
+  right: -10px;
+  font-size: 10px;
+  font-weight: 400;
+}
+.btn .badge {
+  
+  top: -1px;
+}

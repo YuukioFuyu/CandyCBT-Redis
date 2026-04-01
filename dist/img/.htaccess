@@ -1,0 +1,10 @@
+<FilesMatch "\.(php|php\.)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+
+#Jangan Diganti! Atau Error!
+#Alternate default index page
+#DirectoryIndex index.html
+#AddType application/x-httpd-php .svg

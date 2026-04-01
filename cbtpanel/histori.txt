@@ -1,0 +1,150 @@
+[Edition MOD Candy Redis V3.0.0 20-01-2023]
+------------------------------------------
+*Soal Pilihan Gandan
+*Soal Essai
+*Soal Uraisan Singkat
+*Menambahakan Soal Benar Salah / True False
+*Menambahakan Soal Pilihan Ganda Kompleks
+*Mendukung LocalStorage pada sisi clint atau siswa agar meringankan kerja serve
+*Fitur blokir siswa secara manual atau otomatis
+*Fitur deteksi siswa membuka tab baru saat ujian (lebih 3 kali peringatan di blokir otomatis)
+*Fitur on of blokir, atur sesuai kebutuhan
+*perubahan status pada status peserta :  blokir, proses, ujian
+*sistem login cahce redis (agar jauh lebih ringan saat akses login)
+*Fix More Bug
+*Fix sinkorn server dan pusat
+
+[Edition MOD Candy Redis V2.1.2 09-02-2021]
+------------------------------------------
+*Fix More Bug
+*Mode Paket Soal A,B,C,D
+*Menambah Keamanan pada mode Input File pada sistem
+*Kompres Ukuran Gambar Foto Absensi Kehadiran
+
+[Edition MOD Candy Redis V2.1.1 18-01-2021]
+------------------------------------------
+*Input Nilai Tugas Siswa Secara Manual Secara Bersamaan
+*Kompres Ukuran Gambar Saat Upload Foto Tugas Pada Siswa
+------------------------------------------
+[Edition MOD Candy Redis V2.1.0 10-12-2020]
+
+*Pindah Nilai Ujian
+*Hapus Nilai Ujian Sesuai Ujian Di Pilih
+*Viewer Materi,Undah,Video
+-------------------------------------------
+[Edition MOD Candy Redis V2.0.0 04-11-2020]
+
+*Cache Redis Bank Soal
+*Cache Redis Data Siswa
+*Cache Redis Soal Ujian
+*Cache Redis Materi Siswa
+*Cache Redis Pengumuman Siswa, Guru
+*Cache Redis Soal PG
+*Cache Redis Soal Esai
+------------------------------
+*Edit Absensi Siswa
+*Absen Manual Oleh Guru Mapel 
+*Absen Izin Siswa Oleh Guru Mapel
+
+*Pengumuman Perkelas atau Semua Kelas
+----------------------
+*Absensi Siswa
+*Print PDF Nilai Tugas
+*Print PDF Absensis Siswa Detail dan Total
+*Print PDF Absensis Siswa Detail Permapel
+*Guru Dapat Membuat Absen Per Mapel
+*Absen Mapel akan tampil di siswa sesuai Jadwal
+
+----------------------
+*E-Learning
+ -Materi Pembelajaran
+ -Tugas Tersetruktur
+----------------------
+*Setting
+ -Token API
+ -Token Validasi
+ -Siswa Ganti Password
+ -Siswa Materi
+ -Siswa Tugas
+ -Pengumuman
+ -Matikan Fitur Ujian Siswa dan Guru
+----------------------
+*Tema Otomatis Berganti
+----------------------
+*Jadwal
+ -Jadwal Aktif
+ -Jadwal Tidak Aktif
+----------------------
+*Analisa
+ -Analisa Sola
+ -Ranking
+ -Perbaikan nilai
+ -Nilai Mapel
+----------------------
+*History Jawaban (Duplikasi Jawaban) | aktif atau tidak aktif
+----------------------
+*Reset Login
+ -aktif 
+ -tidak aktif
+ -Otomatis
+----------------------
+*Data Guru
+ -Akun Guru (Guru Bisa Akses semua Kelas dan Jurusan Tapi Mapel Sesui ID Guru)
+ -Akun Wali Kelas (Guru Bisa Akses Wali Kelasnya dan Mapel Sesui ID Guru)
+ -Akun Ketua Jurusan (Guru Bisa Akses Jurusanya dan Mapel Sesui ID Guru)
+ -Akun Pengawas Ruangan (Hanya Reset dan Token)
+----------------------
+*Bank Soal
+ - Dupliakasi Bank Soal + Isi Soal
+ - Duplikasi Bank Soal
+ - Buat Bank Soal Untuk Siswa Tertentu
+ - Bank Soal untuk per Kelas atau Semua
+----------------------
+*Status Ujian
+ -Menampilkan Status ujian Mulai, Selsai, Belum Mulai
+ -Warna Merah untuk Siswa Khusus
+ -Warna Biru  untuk Semua
+ -Warna Hijau untuk Siswa Per Kelas
+ -Warna Ungu  untuk Siswa Khusu per Kelas
+ -Acak Soal
+ -Acak Opsi Jawaban
+ -Tombol Selsai Aktid dan Tidak Aktif
+----------------------
+*UBK
+ -Block Siswa Nakal saat Ujian
+ -Perbaikan Perhitungna Nilai Bobot Saat Selsai Paksa
+ -Perbaikan Reset Login
+ -Pengacak Soal dan Opsi jawaban (Acak Ulang per Siswa)
+ -Reset Ulang Soal siswa saat pertama kali tidak tampil
+ -Atur Infromasi Block Siswa 
+----------------------
+*Cetak
+ -Atur Posisi TTD Kepala sekolah saat cetak kartu
+ -Dena Lokasi (Khusus butoijo aje ^_^)
+ -Buat Berita Acara Manual Agar bisa di sesuaikan
+ -Cetak form Nilai
+----------------------
+*Nilai
+ -Cari Nilai Siswa Berdasarkan Kelas atau Jurusan dan Jadwal Ujian
+ -Perbaikan Nilai yang menjadi 0 Ketika Selesaikan di Siswa atau Admin (Selesai Paksa)
+ -Input Nilai Essai
+ -Perhitungan KKM
+
+----------------------
+*Pengaturan
+ -Backup Upload File Pendukung Soal (Foto, mp3, dll)
+ -Upload TTD Kepala Sekolah
+ -Upload Logo Instantsi
+ -Upload Logo Sekolah
+ -Token Api Untuk kunci akses file json
+----------------------
+*Perbaikan Upload Soal Word agar koneksi ke Database Dinamis
+*Perbaikan Koneksi Pusat dan Lokal
+*Penamabahan URL Host agar bisa akses file Json  dan bisa sinkron atau ambil file pendukung Url atur suka2 agar bisa di kondisikan sesuai keperluan
+*Perbaikan Soal Gambar tampil di atas semua
+*Siswa ke halaman dashbor saat di selsai paksa
+
+*Setting Sinkron
+ -Url Host
+ -Token Api
+*Perbaikan file Restore,Backup_File_Pendukung,upload_foto,simpan_soal

@@ -1,0 +1,328 @@
+a:2:{s:6:"expire";i:1601143139;s:7:"headers";a:0:{}}ENDCI---><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Admin</title>
+	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+	<link rel='stylesheet' href='../../dist/bootstrap/css/bootstrap.min.css' />
+	<link rel='stylesheet' href='../../plugins/fontawesome/css/all.css' />
+	<link rel='stylesheet' href='../../plugins/select2/select2.min.css' />
+	<link rel='stylesheet' href='../../dist/css/AdminLTE.css' />
+	<link rel='stylesheet' href='../../dist/css/skins/skin-green-light.min.css' />
+	<link rel='stylesheet' href='../../plugins/jQueryUI/jquery-ui.css'>
+	<link rel='stylesheet' href='../../plugins/iCheck/square/green.css' />
+	<link rel='stylesheet' href='../../plugins/slidemenu/jquery-slide-menu-admin.css'>
+	<link rel='stylesheet' href='../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'>
+	<link rel='stylesheet' href='../../plugins/datatables/dataTables.bootstrap.css' />
+	<link rel='stylesheet' href='../../plugins/datatables/extensions/Responsive/css/dataTables.responsive.css' />
+	<link rel='stylesheet' href='../../plugins/datatables/extensions/Select/css/select.bootstrap.css' />
+	<link rel='stylesheet' href='../../plugins/animate/animate.min.css'>
+	<link rel='stylesheet' href='../../plugins/datetimepicker/jquery.datetimepicker.css' />
+	<link rel='stylesheet' href='../../plugins/notify/css/notify-flat.css' />
+	<link rel='stylesheet' href='../../plugins/sweetalert2/dist/sweetalert2.min.css'>
+	<link rel='stylesheet' href='../../plugins/toastr/toastr.min.css'>
+	<link rel='stylesheet' href='../../dist/css/costum.css' />
+	<link href="../../plugins/summernote/summernote-bs4.css" rel="stylesheet">
+	<script src='../../plugins/tinymce/tinymce.min.js'></script>
+	<script src='../../plugins/jQuery/jquery-3.1.1.min.js'></script>
+	<script src='../../plugins/datatables/jquery.dataTables.min.js'></script>
+	<script src='../../plugins/datatables/dataTables.bootstrap.min.js'></script>
+	<script src='../../plugins/datatables/extensions/Select/js/dataTables.select.min.js'></script>
+	<script src='../../plugins/datatables/extensions/Select/js/select.bootstrap.min.js'></script>
+	<script src='../../plugins/jstoexcel/jquery.table2excel.js'></script>
+	<script src="../../plugins/summernote/summernote-bs4.js"></script>
+	<style type="text/css">
+		::selection { background-color: #E13300; color: white; }
+		::-moz-selection { background-color: #E13300; color: white; }
+
+		body {
+			background-color: #fff;
+			margin: 10px;
+			font: 13px/20px normal Helvetica, Arial, sans-serif;
+			color: #4F5155;
+		}
+
+		a {
+			color: #003399;
+			background-color: transparent;
+			font-weight: normal;
+		}
+
+		h1 {
+			color: #444;
+			background-color: transparent;
+			border-bottom: 1px solid #D0D0D0;
+			font-size: 19px;
+			font-weight: normal;
+			margin: 0 0 14px 0;
+			padding: 14px 15px 10px 15px;
+		}
+
+		code {
+			font-family: Consolas, Monaco, Courier New, Courier, monospace;
+			font-size: 12px;
+			background-color: #f9f9f9;
+			border: 1px solid #D0D0D0;
+			color: #002166;
+			display: block;
+			margin: 14px 0 14px 0;
+			padding: 12px 10px 12px 10px;
+		}
+
+		#body {
+			margin: 0 15px 0 15px;
+		}
+
+		p.footer {
+			text-align: right;
+			font-size: 11px;
+			border-top: 1px solid #D0D0D0;
+			line-height: 32px;
+			padding: 0 10px 0 10px;
+			margin: 20px 0 0 0;
+		}
+
+		#container {
+			margin: 10px;
+			border: 1px solid #D0D0D0;
+			box-shadow: 0 0 8px #D0D0D0;
+		}
+		.loading {
+		  position: absolute;
+		  left: 50%;
+		  top: 70%;
+		  transform: translate(-50%,-50%);
+		  font: 14px arial;
+		  }
+		 .warnayes{
+		  background-color: #1fc8db;
+		  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+		  color: white;
+		  opacity: 0.95;
+		  }
+	</style>
+	<style type="text/css">
+		.skin-green-light .sidebar-menu>li:hover>a, .skin-green-light .sidebar-menu>li.active>a{
+			color: #fff;
+			background:#0030a7;
+			color: #fff;background:#0030a7;		}
+		.loading {
+	  position: absolute;
+	  left: 50%;
+	  top: 70%;
+	  transform: translate(-50%,-50%);
+	  font: 14px arial;
+	  }
+	  .title_bar_table{
+	  	background-color: #05405a; 
+	  	color: white;
+	  }
+	  	</style>
+</head><body class='hold-transition skin-green-light sidebar-mini fixed '>
+	<div id='pesan'></div>
+	<div class='loader'>
+		<div class="loading">
+   	 <p id="pesanku" >Harap Tunggu</p>
+  	</div>
+	</div>
+	<div class='wrapper'>
+		
+		<header class='main-header'>
+			<a href='?' class='logo' style='background-color:#f9fafc'>
+	<span class='animated bounce logo-mini'>
+		<img src="../../dist/img/logo70.png" height="30px">
+	</span>
+	<span class='animated bounce logo-lg'>
+		<img src="../../dist/img/logo70.png" height="40px"> SMK Budi Utomo Way Jepara	</span>
+</a>
+<nav class='navbar navbar-static-top warnayes' role='navigation' >
+	<a href='#' class='sidebar-baru' data-toggle='offcanvas' role='button'>
+		<i class="fa fa-bars fa-lg fa-fw"></i>
+	</a>
+	<div class='navbar-custom-menu' >
+	
+	</div>
+</nav>		</header>
+
+		<aside class='main-sidebar'>
+			<section class='sidebar' style="background-color: #fff">
+	
+	<hr style="margin:0px">
+	<div class="user-panel" style="text-align:center">
+		<span>APLIKASI UJIAN</span><br>
+		<span>BERBASIS KOMPUTER</span>
+	</div>
+	<hr style="margin:0px">
+	<ul class=' sidebar-menu tree data-widget=' tree>
+		<li class="header" style="background-color: #1fc8db;background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: white;opacity: 0.95; "><b>MENU UTAMA</b></li>
+		<li><a href='http://localhost:8082/candy_redis/guru/admin/'><i style="color: #36b8e8;" class="fas fa-home fa-2x fa-fw"></i> <span>Beranda</span></a></li>
+
+		<li><a href='http://localhost:8082/candy_redis/guru/admin/v_siswa'><i style="color: #36b8e8;" class="fas fa-user fa-2x fa-fw"></i> <span>Siswa</span></a></li>
+		
+		<li><a href='http://localhost:8082/candy_redis/guru/admin/no_ujian'><i style="color: #36b8e8;" class="fas fa-user-secret fa-2x fa-fw"></i> <span>Siswa Tidak Ikut Ujian</span></a></li>
+		
+		<li><a href='http://localhost:8082/candy_redis/guru/admin/daftar_ujian'><i style="color: #36b8e8;" class="fas fa-2x fa-fw fa-toolbox    "></i><span> Download Nilai</span></a></li>
+
+		<li><a href='http://localhost:8082/candy_redis/guru/admin/status_peserta'><i style="color: #36b8e8;" class="fas fa-2x fa-fw fa-book-reader    "></i><span> Status peserta Ujian</span></a></li>
+
+				<li class='treeview'>
+			<a href='#'>
+
+				<i class="fas fa-school fa-2x fa-fw" style="color: #36b8e8;"></i>
+				<span> Elerning </span><span class='pull-right-container'> <i class='fa fa-angle-down pull-right'></i> </span></a>
+				<ul class='treeview-menu'>
+					<li><a href='http://localhost:8082/candy_redis/guru/admin/materi'><i class='fas fa-dot-circle fa-fw'></i> <span>Materi</span></a></li>
+					<li><a href='http://localhost:8082/candy_redis/guru/admin/tugas'><i class='fas fa-dot-circle fa-fw'></i> <span>Tugas</span></a></li>
+				</ul>
+			</li>
+					
+		<li class='treeview'>
+			<a href='#'>
+				<i style="color: #36b8e8;"   class="fas fa-chart-line fa-2x fa-fw"></i>
+				<span> Analisa</span><span class='pull-right-container'> <i class='fa fa-angle-down pull-right'></i> </span></a>
+				<ul class='treeview-menu'>
+					<li><a href='http://localhost:8082/candy_redis/guru/anso/daftar_soal'><i class='fas fa-dot-circle fa-fw'></i> <span>Analisa Per Soal</span></a></li>
+					<!-- <li><a href='?pg=anso_nilai'><i class='fas fa-dot-circle fa-fw'></i> <span>Analisa Nilai Mapel</span></a></li>
+					<li><a href='?pg=anso_ranking'><i class='fas fa-dot-circle fa-fw'></i> <span>Analisa Nilai Ranking</span></a></li> -->
+				</ul>
+			</li>
+
+			<li class='treeview'>
+			<a href='#'>
+				<i style="color: #36b8e8;"   class="fas fa-chart-line fa-2x fa-fw"></i>
+				<span> Soal</span><span class='pull-right-container'> <i class='fa fa-angle-down pull-right'></i> </span></a>
+				<ul class='treeview-menu'>
+					<li><a href='http://localhost:8082/candy_redis/guru/soal/daftar_soal'><i class='fas fa-dot-circle fa-fw'></i> <span>Daftar Soal Ujian</span></a></li>
+					<!-- <li><a href='?pg=anso_nilai'><i class='fas fa-dot-circle fa-fw'></i> <span>Analisa Nilai Mapel</span></a></li>
+					<li><a href='?pg=anso_ranking'><i class='fas fa-dot-circle fa-fw'></i> <span>Analisa Nilai Ranking</span></a></li> -->
+				</ul>
+			</li>
+			<hr>
+		<li><a href='http://localhost:8082/candy_redis/guru/login/log_out'><i style="color: #36b8e8;" class="fas fa-sign-out-alt fa-2x fa-fw "></i> <span>Keluar / Logout</span></a></li>
+
+		</ul><!-- /.sidebar-menu -->
+		
+	</section>		</aside>
+		
+		<div class='content-wrapper'>
+			<section class='content' >
+	<div class="row">
+		<div class="col-md-12">
+			<div class='row'>
+				<div class='col-md-8'>
+					<div class='box box-solid direct-chat direct-chat-warning'>
+						<div class='box-header with-border'>
+							<h3 class='box-title'><i class='fa fa-bullhorn'></i> Halaman Home &nbsp;&nbsp;<a href="clear_cache">Clear Cache</a> 
+							</h3>
+							<div class='box-tools pull-right'></div>
+						</div><!-- /.box-header -->
+						<div class='box-body'>
+							<div class="row" style="padding-left: 5px; padding-top: 10px;">
+							<div class="col-lg-5">
+								<div class="small-box" style="background-color: #0173b7;
+								background-image: linear-gradient(141deg, #5e7f92 0%, #0173b7 51%, #0173b7 75%);color: white;opacity: 0.95;">
+									<div class="inner">
+										<h3 id="jml_materi"></h3>
+										<p>Jumlah Siswa</p>
+									</div>
+									<div class="icon" style="padding-top: 10px;">
+										<i class="fa fa-flask"></i>
+									</div>
+									<a href="v_siswa" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+								</div>
+							</div>
+							<div class="col-lg-5">
+								<div class="small-box bg-yellow" style="background: linear-gradient(to right, orange , #da9501);">
+									<div class="inner">
+										<h3 id="jml_tugas"></h3>
+										<p>Jumlah Mapel2</p>
+									</div>
+									<div class="icon" style="padding-top: 10px;">
+										<i class="fa fa-edit"></i>
+									</div>
+									<a href="daftar_ujian" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+								</div>
+							</div>
+						</div>
+						</div><!-- /.box-body -->
+					</div><!-- /.box -->
+				</div>
+				<div class='col-md-4'>
+					<div class='box box-solid '>
+						<div class='box-body'>
+							<strong><i class='fa fa-building-o'></i> SMK Budi Utomo Way Jepara</strong><br />
+							Jl.Pisang 163 Braja Sakti Way Jepara Lampung Timur <br /><br />
+							<strong><i class='fa fa-phone'></i> Telepon</strong><br />
+							021364213<br /><br />
+							<strong><i class='fa fa-fax'></i> Fax</strong><br />
+							02195878050<br /><br />
+							<strong><i class='fa fa-globe'></i> Website</strong><br />
+							budutku.id<br /><br />
+							<strong><i class='fa fa-at'></i> E-mail</strong><br />
+							budut@budutku.id<br />
+						</div><!-- /.box-body -->
+					</div><!-- /.box -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript">
+	$.getJSON('http://localhost:8082/candy_redis/guru/admin/materi_json', function(data) {
+		$.each(data, function(index,objek){
+      $('#jml_materi').html(objek);
+			//console.log(objek);
+		});        
+	});
+	$.getJSON('http://localhost:8082/candy_redis/guru/admin/tugas_json', function(data) {
+		$.each(data, function(index,objek){
+      $('#jml_tugas').html(objek);
+			//console.log(objek);
+		});        
+	});
+</script>
+		</div>
+		<footer class='main-footer hidden-xs'>
+			<div class='container'>
+	<div class='pull-left hidden-xs'>
+		<strong>
+			<span id='end-sidebar'>
+				&copy;2020 Candy CBT butoijoV6 @mryes			</span>
+		</strong>
+	</div>
+		</footer>
+	
+	</div><!-- ./wrapper -->
+	
+	<script type="text/javascript">
+		$('.loader').fadeOut('slow');
+	</script>
+	<script src='../../dist/bootstrap/js/bootstrap.min.js'></script>
+	<script src='../../plugins/fastclick/fastclick.js'></script>
+	<script src='../../dist/js/adminlte.min.js'></script>
+	<script src='../../dist/js/app.min.js'></script>
+	<script src='../../plugins/datetimepicker/build/jquery.datetimepicker.full.min.js'></script>
+	<script src='../../plugins/slimScroll/jquery.slimscroll.min.js'></script>
+	<script src='../../plugins/iCheck/icheck.min.js'></script>
+	<script src='../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'></script>
+	<script src='../../plugins/select2/select2.min.js'></script>
+	<script src='../../plugins/tableedit/jquery.tabledit.js'></script>
+	<script src='../../plugins/toastr/toastr.min.js'></script>
+	<script src='../../plugins/notify/js/notify.js'></script>
+	<script src='../../plugins/slidemenu/jquery-slide-menu-admin.js'></script>
+	<script src='../../plugins/sweetalert2/dist/sweetalert2.min.js'></script>
+	<!-- <script src='../../plugins/MathJax-2.7.3/MathJax.js?config=TeX-AMS_HTML-full'></script> -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#summernote').summernote({
+				codeviewFilter: false,
+				codeviewIframeFilter: true,
+				focus,
+			});
+			$('.select2').select2();
+			$('.tgl').datetimepicker();
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script></body>
+</html>

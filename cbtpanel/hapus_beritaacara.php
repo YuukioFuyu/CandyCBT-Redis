@@ -1,0 +1,19 @@
+<?php
+
+// require("../config/config.default.php");
+include("core/c_admin.php"); 
+require("../config/config.function.php");
+require("../config/functions.crud.php");
+
+(isset($_SESSION['id_pengawas'])) ? $id_pengawas = $_SESSION['id_pengawas'] : $id_pengawas = 0;
+($id_pengawas==0) ? header('location:index.php'):null;
+
+$tabel ='berita';
+
+$cek = truncate($koneksi, $tabel);
+if($cek==true){
+	echo "oke";
+}
+else{
+	echo"no";
+}

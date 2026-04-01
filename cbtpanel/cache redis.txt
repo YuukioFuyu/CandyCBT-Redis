@@ -1,0 +1,14 @@
+m_admin.php
+
+keys siswaall
+datasiswa.php
+
+baca_materi.$id
+hapus_materi.php
+edit_materi.php
+edit_materi2.php
+
+soalpg.php
+soalesai.php
+
+
