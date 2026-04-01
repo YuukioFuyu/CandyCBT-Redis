@@ -1,33 +1,35 @@
 <?php
 
+include_once __DIR__ . '/setting_database.php';
 
-//-------------Jika di Localhost-----------------
+// Menentukan homeurl secara dinamis lewat .env
+$homeurl = isset($_ENV['APP_URL']) ? rtrim($_ENV['APP_URL'], "/") : "http://" . $_SERVER['HTTP_HOST'];
+
 $uri = $_SERVER['REQUEST_URI'];
+if (($pos = strpos($uri, '?')) !== false) {
+    $uri = substr($uri, 0, $pos);
+}
+
+// Ekstrak base path aplikasi dari APP_URL (misalnya /, atau /candy)
+$parsedAppUrl = parse_url($homeurl);
+$basePath = isset($parsedAppUrl['path']) ? rtrim($parsedAppUrl['path'], '/') : '';
+
+// Jika aplikasi dijalankan di sub-direktori, hapus nama sub-direktori dari URI asli
+if (!empty($basePath) && strpos($uri, $basePath) === 0) {
+    $uri = substr($uri, strlen($basePath));
+}
+
+// Sekarang URI bersih (misal: /cbtpanel/login.php)
+if (empty($uri) || strpos($uri, '/') !== 0) {
+    $uri = '/' . $uri;
+}
+
 $pageurl = explode("/", $uri);
-if ($uri == '/') {
-    $homeurl = "http://" . $_SERVER['HTTP_HOST'];
-    (isset($pageurl[1])) ? $pg = $pageurl[1] : $pg = '';
-    (isset($pageurl[2])) ? $ac = $pageurl[2] : $ac = '';
-    (isset($pageurl[3])) ? $id = $pageurl[3] : $id = 0;
-}
-else {
-    $homeurl = "http://" . $_SERVER['HTTP_HOST'] . "/" . $pageurl[1];
-    (isset($pageurl[2])) ? $pg = $pageurl[2] : $pg = '';
-    (isset($pageurl[3])) ? $ac = $pageurl[3] : $ac = '';
-    (isset($pageurl[4])) ? $id = $pageurl[4] : $id = 0;
-}
 
-//-------------Jika di Localhost-----------------
+(isset($pageurl[1])) ? $pg = $pageurl[1] : $pg = '';
+(isset($pageurl[2])) ? $ac = $pageurl[2] : $ac = '';
+(isset($pageurl[3])) ? $id = $pageurl[3] : $id = 0;
 
-//-------------Jika di Hosting-----------------
-//$uri = $_SERVER['REQUEST_URI'];
-//$pageurl = explode("/",$uri);
-
-//$homeurl = "http://".$_SERVER['HTTP_HOST']; //---tambah s pada http jika web sudah mendukung https
-//(isset($pageurl[1])) ? $pg = $pageurl[1] : $pg = '';
-//(isset($pageurl[2])) ? $ac = $pageurl[2] : $ac = '';
-//(isset($pageurl[3])) ? $id = $pageurl[3] : $id = 0;
-//-------------Jika di Hosting-----------------
 
 function WaktuLamaCache2()
 { // ganti untuk lama waktu cache
@@ -44,31 +46,5 @@ $info = '';
 $waktu = date('H:i:s');
 $tanggal = date('Y-m-d');
 $datetime = date('Y-m-d H:i:s');
-
-
-
-if (strpos($_SERVER['HTTP_SEC_CH_UA'], 'Chrome')) {
-// Blok kode untuk browser Chrome
-}
-else if (strpos($_SERVER['HTTP_SEC_CH_UA'], 'Edge')) {
-// Blok kode untuk browser Edge
-}
-else if (strpos($_SERVER['HTTP_USER_AGENT'], 'cbt-') !== false) {
-// Blok kode untuk izin akses string UA "cbt-"
-}
-else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Safari')) {
-// Blok kode untuk browser Safari
-}
-else if (strpos($_SERVER['HTTP_USER_AGENT'], 'cbtredis') !== false) {
-// Blok kode untuk izin akses string UA "cbt-"
-}
-else if (strpos($_SERVER['HTTP_SEC_CH_UA_MOBILE'], '')) {
-// Blok kode untuk browser mobile
-
-
-}
-else {
-    header('Location: warningbro.html');
-}
 
 ?>
