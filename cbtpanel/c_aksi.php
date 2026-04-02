@@ -18,6 +18,7 @@
 &15.Konek Server MKKS
 &16.Nilai
 */
+require("../config/config.redis.php");
 require("../config/config.function.php");
 require("../config/functions.crud.php");
 include("core/c_admin.php"); 

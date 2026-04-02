@@ -37,7 +37,9 @@
 					<a href='#' class='dropdown-toggle' data-toggle='dropdown' style="padding-top: 22px">
 						<span class="hidden-xs" style='font-size:15px'>
 							<?php   
-							echo round(memory_get_usage()/1048576,2).''.' MB';?>
+							// Memori yang akan ditampilkan pada label akan didapat dari redis info
+							// echo round(memory_get_usage()/1048576,2).''.' MB';
+							?>
 						</span>
 					</a>
 				</li>
@@ -48,9 +50,28 @@
 						<span class="hidden-xs" style='font-size:15px'>
 							<?php
 									try {
-									    $Redis->ping();
-									    echo('<span class="label label-success" style="font-size:15px; border-radius: 90%;"> &nbsp;&nbsp;</span>');
-									} catch (Exception $e) {
+									    $redisNative = new Redis();
+									    $host = isset($_ENV['REDIS_HOST']) ? $_ENV['REDIS_HOST'] : '127.0.0.1';
+									    $port = isset($_ENV['REDIS_PORT']) ? $_ENV['REDIS_PORT'] : 6379;
+									    $password = isset($_ENV['REDIS_PASSWORD']) ? $_ENV['REDIS_PASSWORD'] : '';
+									    $username = isset($_ENV['REDIS_USERNAME']) ? $_ENV['REDIS_USERNAME'] : '';
+									    if($redisNative->connect($host, $port)){
+									        if (!empty($password)) {
+									            if (!empty($username)) {
+									                $redisNative->auth([$username, $password]);
+									            } else {
+									                $redisNative->auth($password);
+									            }
+									        }
+									        $ping = $redisNative->ping();
+									        $info = $redisNative->info('memory');
+									        $memoryHuman = isset($info['used_memory_human']) ? $info['used_memory_human'] : '?';
+									        
+									        echo($memoryHuman . ' <span class="label label-success" style="font-size:15px; border-radius: 90%;"> &nbsp;&nbsp;</span>');
+									    } else {
+									        echo('<span class="label label-danger" style="font-size:15px;border-radius: 90%;"> &nbsp;&nbsp;</span>');
+									    }
+									} catch (Throwable $e) {
 									    if($e->getMessage()){
 									      echo('<span class="label label-danger" style="font-size:15px;border-radius: 90%;"> &nbsp;&nbsp;</span>');
 									    }
