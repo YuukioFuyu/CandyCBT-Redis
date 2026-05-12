@@ -18,13 +18,13 @@ jobs:
 
       - name: Prepare Git
         run: |
-          ssh root@2.0.2.102 << 'EOF'
+          ssh root@2.0.2.122 << 'EOF'
             git config --global --add safe.directory /opt/docker/demo_yuukiofuyu_candycbt-redis/app
           EOF
 
       - name: Update Source Code
         run: |
-          ssh root@2.0.2.102 << 'EOF'
+          ssh root@2.0.2.122 << 'EOF'
             cd /opt/docker/demo_yuukiofuyu_candycbt-redis/app
             git fetch origin
             git reset --hard origin/main
@@ -33,12 +33,12 @@ jobs:
 
       - name: Fix Permission
         run: |
-          ssh root@2.0.2.102 << 'EOF'
+          ssh root@2.0.2.122 << 'EOF'
             chown -R www-data:www-data /opt/docker/demo_yuukiofuyu_candycbt-redis/app
           EOF
 
       - name: Create .env file
         run: |
-          ssh root@2.0.2.102 << EOF
+          ssh root@2.0.2.122 << EOF
             printf '%s' "${{ secrets.ENV }}" > /opt/docker/demo_yuukiofuyu_candycbt-redis/app/.env
           EOF
